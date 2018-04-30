@@ -7,20 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04C55DCA2096B60400C9BE9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C55DC82096B60400C9BE9A /* LaunchScreen.storyboard */; };
-		04C55DE12096BA9F00C9BE9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C55DD62096BA9E00C9BE9A /* LaunchScreen.storyboard */; };
 		04C55DE22096BA9F00C9BE9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C55DDB2096BA9F00C9BE9A /* AppDelegate.m */; };
 		04C55DE32096BA9F00C9BE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C55DDD2096BA9F00C9BE9A /* Assets.xcassets */; };
 		04C55DE42096BA9F00C9BE9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C55DDE2096BA9F00C9BE9A /* main.m */; };
 		04C55DE52096BA9F00C9BE9A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04C55DDF2096BA9F00C9BE9A /* Info.plist */; };
 		04FD5FF62096BD9E007DBAE5 /* MXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD5FF52096BD9E007DBAE5 /* MXMainViewController.m */; };
+		04FD5FF92096D93B007DBAE5 /* MXTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD5FF82096D93B007DBAE5 /* MXTopView.m */; };
+		04FD5FFC2096D94F007DBAE5 /* MXCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD5FFB2096D94F007DBAE5 /* MXCenterView.m */; };
+		04FD60002096D97E007DBAE5 /* MXBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD5FFF2096D97E007DBAE5 /* MXBottomView.m */; };
+		04FD601420970169007DBAE5 /* 赵雷 - 南方姑娘.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 04FD600720970168007DBAE5 /* 赵雷 - 南方姑娘.lrc */; };
+		04FD601520970169007DBAE5 /* 谢春花 - 借我.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04FD600820970168007DBAE5 /* 谢春花 - 借我.mp3 */; };
+		04FD601620970169007DBAE5 /* 谢春花 - 借我.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 04FD600920970168007DBAE5 /* 谢春花 - 借我.lrc */; };
+		04FD601720970169007DBAE5 /* 赵雷 - 南方姑娘.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04FD600A20970168007DBAE5 /* 赵雷 - 南方姑娘.mp3 */; };
+		04FD601820970169007DBAE5 /* 朋友陪你醉.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04FD600B20970168007DBAE5 /* 朋友陪你醉.mp3 */; };
+		04FD601920970169007DBAE5 /* 静静的看着你装逼.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 04FD600C20970168007DBAE5 /* 静静的看着你装逼.lrc */; };
+		04FD601A20970169007DBAE5 /* mlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04FD600D20970168007DBAE5 /* mlist.plist */; };
+		04FD601B20970169007DBAE5 /* 朋友陪你醉.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 04FD600E20970168007DBAE5 /* 朋友陪你醉.lrc */; };
+		04FD601C20970169007DBAE5 /* 静静的看着你装逼.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04FD600F20970168007DBAE5 /* 静静的看着你装逼.mp3 */; };
+		04FD601D20970169007DBAE5 /* 夏婉安 - 六楼.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 04FD601020970168007DBAE5 /* 夏婉安 - 六楼.lrc */; };
+		04FD601E20970169007DBAE5 /* 谢春花 - 雀斑少女.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04FD601120970168007DBAE5 /* 谢春花 - 雀斑少女.mp3 */; };
+		04FD601F20970169007DBAE5 /* 谢春花 - 雀斑少女.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 04FD601220970168007DBAE5 /* 谢春花 - 雀斑少女.lrc */; };
+		04FD602020970169007DBAE5 /* 夏婉安 - 六楼.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04FD601320970168007DBAE5 /* 夏婉安 - 六楼.mp3 */; };
+		04FD60232097018A007DBAE5 /* MXMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD60222097018A007DBAE5 /* MXMusic.m */; };
+		04FD602620971301007DBAE5 /* MXPlayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD602520971301007DBAE5 /* MXPlayManager.m */; };
 		AA42E1218CDA7C81155B16DC /* libPods-EchoQQMusicImitate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A51E8FB43F06B2C078A28B1 /* libPods-EchoQQMusicImitate.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04C55DBA2096B60300C9BE9A /* EchoQQMusicImitate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EchoQQMusicImitate.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		04C55DC92096B60400C9BE9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		04C55DD72096BA9E00C9BE9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04C55DDA2096BA9F00C9BE9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04C55DDB2096BA9F00C9BE9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		04C55DDD2096BA9F00C9BE9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,6 +42,31 @@
 		04C55DDF2096BA9F00C9BE9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04FD5FF42096BD9E007DBAE5 /* MXMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXMainViewController.h; sourceTree = "<group>"; };
 		04FD5FF52096BD9E007DBAE5 /* MXMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXMainViewController.m; sourceTree = "<group>"; };
+		04FD5FF72096D93B007DBAE5 /* MXTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXTopView.h; sourceTree = "<group>"; };
+		04FD5FF82096D93B007DBAE5 /* MXTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXTopView.m; sourceTree = "<group>"; };
+		04FD5FFA2096D94F007DBAE5 /* MXCenterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXCenterView.h; sourceTree = "<group>"; };
+		04FD5FFB2096D94F007DBAE5 /* MXCenterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXCenterView.m; sourceTree = "<group>"; };
+		04FD5FFE2096D97E007DBAE5 /* MXBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXBottomView.h; sourceTree = "<group>"; };
+		04FD5FFF2096D97E007DBAE5 /* MXBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXBottomView.m; sourceTree = "<group>"; };
+		04FD60022096DAA7007DBAE5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		04FD60032096DABE007DBAE5 /* MXDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXDefine.h; sourceTree = "<group>"; };
+		04FD600720970168007DBAE5 /* 赵雷 - 南方姑娘.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "赵雷 - 南方姑娘.lrc"; sourceTree = "<group>"; };
+		04FD600820970168007DBAE5 /* 谢春花 - 借我.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "谢春花 - 借我.mp3"; sourceTree = "<group>"; };
+		04FD600920970168007DBAE5 /* 谢春花 - 借我.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "谢春花 - 借我.lrc"; sourceTree = "<group>"; };
+		04FD600A20970168007DBAE5 /* 赵雷 - 南方姑娘.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "赵雷 - 南方姑娘.mp3"; sourceTree = "<group>"; };
+		04FD600B20970168007DBAE5 /* 朋友陪你醉.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "朋友陪你醉.mp3"; sourceTree = "<group>"; };
+		04FD600C20970168007DBAE5 /* 静静的看着你装逼.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "静静的看着你装逼.lrc"; sourceTree = "<group>"; };
+		04FD600D20970168007DBAE5 /* mlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mlist.plist; sourceTree = "<group>"; };
+		04FD600E20970168007DBAE5 /* 朋友陪你醉.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "朋友陪你醉.lrc"; sourceTree = "<group>"; };
+		04FD600F20970168007DBAE5 /* 静静的看着你装逼.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "静静的看着你装逼.mp3"; sourceTree = "<group>"; };
+		04FD601020970168007DBAE5 /* 夏婉安 - 六楼.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "夏婉安 - 六楼.lrc"; sourceTree = "<group>"; };
+		04FD601120970168007DBAE5 /* 谢春花 - 雀斑少女.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "谢春花 - 雀斑少女.mp3"; sourceTree = "<group>"; };
+		04FD601220970168007DBAE5 /* 谢春花 - 雀斑少女.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "谢春花 - 雀斑少女.lrc"; sourceTree = "<group>"; };
+		04FD601320970168007DBAE5 /* 夏婉安 - 六楼.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "夏婉安 - 六楼.mp3"; sourceTree = "<group>"; };
+		04FD60212097018A007DBAE5 /* MXMusic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXMusic.h; sourceTree = "<group>"; };
+		04FD60222097018A007DBAE5 /* MXMusic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXMusic.m; sourceTree = "<group>"; };
+		04FD602420971301007DBAE5 /* MXPlayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXPlayManager.h; sourceTree = "<group>"; };
+		04FD602520971301007DBAE5 /* MXPlayManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXPlayManager.m; sourceTree = "<group>"; };
 		47215FEA1954C79CAF6156A8 /* Pods-EchoQQMusicImitate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EchoQQMusicImitate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EchoQQMusicImitate/Pods-EchoQQMusicImitate.debug.xcconfig"; sourceTree = "<group>"; };
 		8FC7C8B7E29A53C99B8162A3 /* Pods-EchoQQMusicImitate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EchoQQMusicImitate.release.xcconfig"; path = "Pods/Target Support Files/Pods-EchoQQMusicImitate/Pods-EchoQQMusicImitate.release.xcconfig"; sourceTree = "<group>"; };
 		9A51E8FB43F06B2C078A28B1 /* libPods-EchoQQMusicImitate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EchoQQMusicImitate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,9 +110,9 @@
 				04C55DD82096BA9E00C9BE9A /* View */,
 				04C55DD32096BA9E00C9BE9A /* Tool */,
 				04C55DD92096BA9F00C9BE9A /* Others */,
-				04C55DD52096BA9E00C9BE9A /* Base.lproj */,
+				04FD60012096DA98007DBAE5 /* PublicDefine */,
 				04C55DDC2096BA9F00C9BE9A /* SupportingFiles */,
-				04C55DC82096B60400C9BE9A /* LaunchScreen.storyboard */,
+				04FD600620970168007DBAE5 /* Source */,
 				04C55DDF2096BA9F00C9BE9A /* Info.plist */,
 				04C55DDD2096BA9F00C9BE9A /* Assets.xcassets */,
 			);
@@ -83,6 +122,8 @@
 		04C55DD32096BA9E00C9BE9A /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				04FD602420971301007DBAE5 /* MXPlayManager.h */,
+				04FD602520971301007DBAE5 /* MXPlayManager.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -96,17 +137,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		04C55DD52096BA9E00C9BE9A /* Base.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				04C55DD62096BA9E00C9BE9A /* LaunchScreen.storyboard */,
-			);
-			path = Base.lproj;
-			sourceTree = "<group>";
-		};
 		04C55DD82096BA9E00C9BE9A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04FD5FF72096D93B007DBAE5 /* MXTopView.h */,
+				04FD5FF82096D93B007DBAE5 /* MXTopView.m */,
+				04FD5FFA2096D94F007DBAE5 /* MXCenterView.h */,
+				04FD5FFB2096D94F007DBAE5 /* MXCenterView.m */,
+				04FD5FFE2096D97E007DBAE5 /* MXBottomView.h */,
+				04FD5FFF2096D97E007DBAE5 /* MXBottomView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,8 +170,39 @@
 		04C55DE02096BA9F00C9BE9A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04FD60212097018A007DBAE5 /* MXMusic.h */,
+				04FD60222097018A007DBAE5 /* MXMusic.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		04FD60012096DA98007DBAE5 /* PublicDefine */ = {
+			isa = PBXGroup;
+			children = (
+				04FD60022096DAA7007DBAE5 /* PrefixHeader.pch */,
+				04FD60032096DABE007DBAE5 /* MXDefine.h */,
+			);
+			path = PublicDefine;
+			sourceTree = "<group>";
+		};
+		04FD600620970168007DBAE5 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				04FD600720970168007DBAE5 /* 赵雷 - 南方姑娘.lrc */,
+				04FD600820970168007DBAE5 /* 谢春花 - 借我.mp3 */,
+				04FD600920970168007DBAE5 /* 谢春花 - 借我.lrc */,
+				04FD600A20970168007DBAE5 /* 赵雷 - 南方姑娘.mp3 */,
+				04FD600B20970168007DBAE5 /* 朋友陪你醉.mp3 */,
+				04FD600C20970168007DBAE5 /* 静静的看着你装逼.lrc */,
+				04FD600D20970168007DBAE5 /* mlist.plist */,
+				04FD600E20970168007DBAE5 /* 朋友陪你醉.lrc */,
+				04FD600F20970168007DBAE5 /* 静静的看着你装逼.mp3 */,
+				04FD601020970168007DBAE5 /* 夏婉安 - 六楼.lrc */,
+				04FD601120970168007DBAE5 /* 谢春花 - 雀斑少女.mp3 */,
+				04FD601220970168007DBAE5 /* 谢春花 - 雀斑少女.lrc */,
+				04FD601320970168007DBAE5 /* 夏婉安 - 六楼.mp3 */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		56D3F2551DE4AA26D95C74BB /* Frameworks */ = {
@@ -211,10 +281,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FD601C20970169007DBAE5 /* 静静的看着你装逼.mp3 in Resources */,
 				04C55DE52096BA9F00C9BE9A /* Info.plist in Resources */,
-				04C55DCA2096B60400C9BE9A /* LaunchScreen.storyboard in Resources */,
+				04FD601D20970169007DBAE5 /* 夏婉安 - 六楼.lrc in Resources */,
+				04FD601720970169007DBAE5 /* 赵雷 - 南方姑娘.mp3 in Resources */,
+				04FD601A20970169007DBAE5 /* mlist.plist in Resources */,
+				04FD602020970169007DBAE5 /* 夏婉安 - 六楼.mp3 in Resources */,
+				04FD601620970169007DBAE5 /* 谢春花 - 借我.lrc in Resources */,
+				04FD601420970169007DBAE5 /* 赵雷 - 南方姑娘.lrc in Resources */,
+				04FD601B20970169007DBAE5 /* 朋友陪你醉.lrc in Resources */,
+				04FD601E20970169007DBAE5 /* 谢春花 - 雀斑少女.mp3 in Resources */,
+				04FD601F20970169007DBAE5 /* 谢春花 - 雀斑少女.lrc in Resources */,
 				04C55DE32096BA9F00C9BE9A /* Assets.xcassets in Resources */,
-				04C55DE12096BA9F00C9BE9A /* LaunchScreen.storyboard in Resources */,
+				04FD601920970169007DBAE5 /* 静静的看着你装逼.lrc in Resources */,
+				04FD601820970169007DBAE5 /* 朋友陪你醉.mp3 in Resources */,
+				04FD601520970169007DBAE5 /* 谢春花 - 借我.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,32 +327,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FD602620971301007DBAE5 /* MXPlayManager.m in Sources */,
+				04FD60002096D97E007DBAE5 /* MXBottomView.m in Sources */,
+				04FD5FFC2096D94F007DBAE5 /* MXCenterView.m in Sources */,
 				04C55DE42096BA9F00C9BE9A /* main.m in Sources */,
+				04FD5FF92096D93B007DBAE5 /* MXTopView.m in Sources */,
+				04FD60232097018A007DBAE5 /* MXMusic.m in Sources */,
 				04FD5FF62096BD9E007DBAE5 /* MXMainViewController.m in Sources */,
 				04C55DE22096BA9F00C9BE9A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		04C55DC82096B60400C9BE9A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04C55DC92096B60400C9BE9A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		04C55DD62096BA9E00C9BE9A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04C55DD72096BA9E00C9BE9A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		04C55DCE2096B60400C9BE9A /* Debug */ = {
@@ -389,14 +456,18 @@
 			baseConfigurationReference = 47215FEA1954C79CAF6156A8 /* Pods-EchoQQMusicImitate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R94472JZM4;
+				GCC_PREFIX_HEADER = "/Users/mac/Documents/programming/Objective-CProgramme/EchoQQMusicImitate/EchoQQMusicImitate/EchoQQMusicImitate/PublicDefine/PrefixHeader.pch";
 				INFOPLIST_FILE = EchoQQMusicImitate/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = mac.EchoQQMusicImitate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -405,14 +476,18 @@
 			baseConfigurationReference = 8FC7C8B7E29A53C99B8162A3 /* Pods-EchoQQMusicImitate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R94472JZM4;
+				GCC_PREFIX_HEADER = "/Users/mac/Documents/programming/Objective-CProgramme/EchoQQMusicImitate/EchoQQMusicImitate/EchoQQMusicImitate/PublicDefine/PrefixHeader.pch";
 				INFOPLIST_FILE = EchoQQMusicImitate/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = mac.EchoQQMusicImitate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
