@@ -7,25 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04C55DBF2096B60300C9BE9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C55DBE2096B60300C9BE9A /* AppDelegate.m */; };
-		04C55DC22096B60300C9BE9A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C55DC12096B60300C9BE9A /* ViewController.m */; };
-		04C55DC52096B60300C9BE9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C55DC32096B60300C9BE9A /* Main.storyboard */; };
-		04C55DC72096B60400C9BE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C55DC62096B60400C9BE9A /* Assets.xcassets */; };
 		04C55DCA2096B60400C9BE9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C55DC82096B60400C9BE9A /* LaunchScreen.storyboard */; };
-		04C55DCD2096B60400C9BE9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C55DCC2096B60400C9BE9A /* main.m */; };
+		04C55DE12096BA9F00C9BE9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C55DD62096BA9E00C9BE9A /* LaunchScreen.storyboard */; };
+		04C55DE22096BA9F00C9BE9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C55DDB2096BA9F00C9BE9A /* AppDelegate.m */; };
+		04C55DE32096BA9F00C9BE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C55DDD2096BA9F00C9BE9A /* Assets.xcassets */; };
+		04C55DE42096BA9F00C9BE9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C55DDE2096BA9F00C9BE9A /* main.m */; };
+		04C55DE52096BA9F00C9BE9A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04C55DDF2096BA9F00C9BE9A /* Info.plist */; };
+		04FD5FF62096BD9E007DBAE5 /* MXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD5FF52096BD9E007DBAE5 /* MXMainViewController.m */; };
+		AA42E1218CDA7C81155B16DC /* libPods-EchoQQMusicImitate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A51E8FB43F06B2C078A28B1 /* libPods-EchoQQMusicImitate.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04C55DBA2096B60300C9BE9A /* EchoQQMusicImitate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EchoQQMusicImitate.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		04C55DBD2096B60300C9BE9A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		04C55DBE2096B60300C9BE9A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		04C55DC02096B60300C9BE9A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		04C55DC12096B60300C9BE9A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		04C55DC42096B60300C9BE9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		04C55DC62096B60400C9BE9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04C55DC92096B60400C9BE9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		04C55DCB2096B60400C9BE9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04C55DCC2096B60400C9BE9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04C55DD72096BA9E00C9BE9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04C55DDA2096BA9F00C9BE9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04C55DDB2096BA9F00C9BE9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04C55DDD2096BA9F00C9BE9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04C55DDE2096BA9F00C9BE9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04C55DDF2096BA9F00C9BE9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04FD5FF42096BD9E007DBAE5 /* MXMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXMainViewController.h; sourceTree = "<group>"; };
+		04FD5FF52096BD9E007DBAE5 /* MXMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXMainViewController.m; sourceTree = "<group>"; };
+		47215FEA1954C79CAF6156A8 /* Pods-EchoQQMusicImitate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EchoQQMusicImitate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EchoQQMusicImitate/Pods-EchoQQMusicImitate.debug.xcconfig"; sourceTree = "<group>"; };
+		8FC7C8B7E29A53C99B8162A3 /* Pods-EchoQQMusicImitate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EchoQQMusicImitate.release.xcconfig"; path = "Pods/Target Support Files/Pods-EchoQQMusicImitate/Pods-EchoQQMusicImitate.release.xcconfig"; sourceTree = "<group>"; };
+		9A51E8FB43F06B2C078A28B1 /* libPods-EchoQQMusicImitate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EchoQQMusicImitate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA42E1218CDA7C81155B16DC /* libPods-EchoQQMusicImitate.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +50,8 @@
 			children = (
 				04C55DBC2096B60300C9BE9A /* EchoQQMusicImitate */,
 				04C55DBB2096B60300C9BE9A /* Products */,
+				9409674A15FCF03A95D87A4F /* Pods */,
+				56D3F2551DE4AA26D95C74BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,17 +66,90 @@
 		04C55DBC2096B60300C9BE9A /* EchoQQMusicImitate */ = {
 			isa = PBXGroup;
 			children = (
-				04C55DBD2096B60300C9BE9A /* AppDelegate.h */,
-				04C55DBE2096B60300C9BE9A /* AppDelegate.m */,
-				04C55DC02096B60300C9BE9A /* ViewController.h */,
-				04C55DC12096B60300C9BE9A /* ViewController.m */,
-				04C55DC32096B60300C9BE9A /* Main.storyboard */,
-				04C55DC62096B60400C9BE9A /* Assets.xcassets */,
+				04C55DD42096BA9E00C9BE9A /* Controller */,
+				04C55DE02096BA9F00C9BE9A /* Model */,
+				04C55DD82096BA9E00C9BE9A /* View */,
+				04C55DD32096BA9E00C9BE9A /* Tool */,
+				04C55DD92096BA9F00C9BE9A /* Others */,
+				04C55DD52096BA9E00C9BE9A /* Base.lproj */,
+				04C55DDC2096BA9F00C9BE9A /* SupportingFiles */,
 				04C55DC82096B60400C9BE9A /* LaunchScreen.storyboard */,
-				04C55DCB2096B60400C9BE9A /* Info.plist */,
-				04C55DCC2096B60400C9BE9A /* main.m */,
+				04C55DDF2096BA9F00C9BE9A /* Info.plist */,
+				04C55DDD2096BA9F00C9BE9A /* Assets.xcassets */,
 			);
 			path = EchoQQMusicImitate;
+			sourceTree = "<group>";
+		};
+		04C55DD32096BA9E00C9BE9A /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		04C55DD42096BA9E00C9BE9A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04FD5FF42096BD9E007DBAE5 /* MXMainViewController.h */,
+				04FD5FF52096BD9E007DBAE5 /* MXMainViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04C55DD52096BA9E00C9BE9A /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				04C55DD62096BA9E00C9BE9A /* LaunchScreen.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		04C55DD82096BA9E00C9BE9A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04C55DD92096BA9F00C9BE9A /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				04C55DDA2096BA9F00C9BE9A /* AppDelegate.h */,
+				04C55DDB2096BA9F00C9BE9A /* AppDelegate.m */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		04C55DDC2096BA9F00C9BE9A /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				04C55DDE2096BA9F00C9BE9A /* main.m */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		04C55DE02096BA9F00C9BE9A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		56D3F2551DE4AA26D95C74BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A51E8FB43F06B2C078A28B1 /* libPods-EchoQQMusicImitate.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9409674A15FCF03A95D87A4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47215FEA1954C79CAF6156A8 /* Pods-EchoQQMusicImitate.debug.xcconfig */,
+				8FC7C8B7E29A53C99B8162A3 /* Pods-EchoQQMusicImitate.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +159,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04C55DD02096B60400C9BE9A /* Build configuration list for PBXNativeTarget "EchoQQMusicImitate" */;
 			buildPhases = (
+				67E5331471121D6112D04150 /* [CP] Check Pods Manifest.lock */,
 				04C55DB62096B60300C9BE9A /* Sources */,
 				04C55DB72096B60300C9BE9A /* Frameworks */,
 				04C55DB82096B60300C9BE9A /* Resources */,
@@ -97,6 +179,7 @@
 		04C55DB22096B60300C9BE9A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MX;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = mac;
 				TargetAttributes = {
@@ -128,40 +211,62 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C55DE52096BA9F00C9BE9A /* Info.plist in Resources */,
 				04C55DCA2096B60400C9BE9A /* LaunchScreen.storyboard in Resources */,
-				04C55DC72096B60400C9BE9A /* Assets.xcassets in Resources */,
-				04C55DC52096B60300C9BE9A /* Main.storyboard in Resources */,
+				04C55DE32096BA9F00C9BE9A /* Assets.xcassets in Resources */,
+				04C55DE12096BA9F00C9BE9A /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		67E5331471121D6112D04150 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EchoQQMusicImitate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04C55DB62096B60300C9BE9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04C55DC22096B60300C9BE9A /* ViewController.m in Sources */,
-				04C55DCD2096B60400C9BE9A /* main.m in Sources */,
-				04C55DBF2096B60300C9BE9A /* AppDelegate.m in Sources */,
+				04C55DE42096BA9F00C9BE9A /* main.m in Sources */,
+				04FD5FF62096BD9E007DBAE5 /* MXMainViewController.m in Sources */,
+				04C55DE22096BA9F00C9BE9A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		04C55DC32096B60300C9BE9A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04C55DC42096B60300C9BE9A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		04C55DC82096B60400C9BE9A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				04C55DC92096B60400C9BE9A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		04C55DD62096BA9E00C9BE9A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04C55DD72096BA9E00C9BE9A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -281,15 +386,14 @@
 		};
 		04C55DD12096B60400C9BE9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47215FEA1954C79CAF6156A8 /* Pods-EchoQQMusicImitate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R94472JZM4;
 				INFOPLIST_FILE = EchoQQMusicImitate/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mac.EchoQQMusicImitate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,15 +402,14 @@
 		};
 		04C55DD22096B60400C9BE9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FC7C8B7E29A53C99B8162A3 /* Pods-EchoQQMusicImitate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R94472JZM4;
 				INFOPLIST_FILE = EchoQQMusicImitate/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mac.EchoQQMusicImitate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

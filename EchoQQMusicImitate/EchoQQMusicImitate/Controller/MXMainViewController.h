@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MXMainViewController.h
 //  EchoQQMusicImitate
 //
 //  Created by mac on 2018/4/30.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MXMainViewController : UIViewController
 
 @end
-
