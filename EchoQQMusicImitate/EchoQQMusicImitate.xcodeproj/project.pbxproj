@@ -30,6 +30,7 @@
 		04FD602020970169007DBAE5 /* 夏婉安 - 六楼.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04FD601320970168007DBAE5 /* 夏婉安 - 六楼.mp3 */; };
 		04FD60232097018A007DBAE5 /* MXMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD60222097018A007DBAE5 /* MXMusic.m */; };
 		04FD602620971301007DBAE5 /* MXPlayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD602520971301007DBAE5 /* MXPlayManager.m */; };
+		04FD6029209735DA007DBAE5 /* MXTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD6028209735DA007DBAE5 /* MXTimeTool.m */; };
 		AA42E1218CDA7C81155B16DC /* libPods-EchoQQMusicImitate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A51E8FB43F06B2C078A28B1 /* libPods-EchoQQMusicImitate.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,8 @@
 		04FD60222097018A007DBAE5 /* MXMusic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXMusic.m; sourceTree = "<group>"; };
 		04FD602420971301007DBAE5 /* MXPlayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXPlayManager.h; sourceTree = "<group>"; };
 		04FD602520971301007DBAE5 /* MXPlayManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXPlayManager.m; sourceTree = "<group>"; };
+		04FD6027209735DA007DBAE5 /* MXTimeTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXTimeTool.h; sourceTree = "<group>"; };
+		04FD6028209735DA007DBAE5 /* MXTimeTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXTimeTool.m; sourceTree = "<group>"; };
 		47215FEA1954C79CAF6156A8 /* Pods-EchoQQMusicImitate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EchoQQMusicImitate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EchoQQMusicImitate/Pods-EchoQQMusicImitate.debug.xcconfig"; sourceTree = "<group>"; };
 		8FC7C8B7E29A53C99B8162A3 /* Pods-EchoQQMusicImitate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EchoQQMusicImitate.release.xcconfig"; path = "Pods/Target Support Files/Pods-EchoQQMusicImitate/Pods-EchoQQMusicImitate.release.xcconfig"; sourceTree = "<group>"; };
 		9A51E8FB43F06B2C078A28B1 /* libPods-EchoQQMusicImitate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EchoQQMusicImitate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +127,8 @@
 			children = (
 				04FD602420971301007DBAE5 /* MXPlayManager.h */,
 				04FD602520971301007DBAE5 /* MXPlayManager.m */,
+				04FD6027209735DA007DBAE5 /* MXTimeTool.h */,
+				04FD6028209735DA007DBAE5 /* MXTimeTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 			files = (
 				04FD602620971301007DBAE5 /* MXPlayManager.m in Sources */,
 				04FD60002096D97E007DBAE5 /* MXBottomView.m in Sources */,
+				04FD6029209735DA007DBAE5 /* MXTimeTool.m in Sources */,
 				04FD5FFC2096D94F007DBAE5 /* MXCenterView.m in Sources */,
 				04C55DE42096BA9F00C9BE9A /* main.m in Sources */,
 				04FD5FF92096D93B007DBAE5 /* MXTopView.m in Sources */,

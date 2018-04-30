@@ -13,6 +13,7 @@
 #import "MXMusic.h"
 #import <MJExtension.h>
 #import "MXPlayManager.h"
+#import "MXTimeTool.h"
 
 #define TopHeight (124)
 #define BottomHeight (140)
@@ -38,6 +39,8 @@
 
 @property (nonatomic, assign) BOOL isPlaying;
 
+@property (nonatomic, strong) NSTimer *timer;
+
 @end
 
 @implementation MXMainViewController
@@ -60,6 +63,12 @@
     self.topView.music = _currentMusicModel;
     self.centerView.music = _currentMusicModel;
     self.bottomView.music = _currentMusicModel;
+    if (self.playManager.allTime == 0) {
+        self.bottomView.allTimeLabel.text = [MXTimeTool timeStringFromMusicFile:_currentMusicModel.mp3];
+    } else {
+        self.bottomView.allTimeLabel.text = [MXTimeTool timeStringFromTimeInterval:self.playManager.allTime];
+    }
+    self.bottomView.beginTimeLabel.text = [MXTimeTool timeStringFromTimeInterval:self.playManager.currentTime];
 }
 
 - (void)makeUpMarsonry {
@@ -102,13 +111,27 @@
 }
 
 - (void)playCurrentMusic {
+    self.bottomView.progressSlider.value = 0;
+    [self startTimer];
     [self.playManager playWithContentOfFile:self.currentMusicModel.mp3 didCompletion:^{
-        [self nextMusic];
+        self.currentMusic++;
+        [self changeMusic];
     }];
 }
 
 - (void)pauseCurrentMusic {
     [self.playManager.player pause];
+    [self stopTimer];
+}
+
+- (void)playProgressChange {
+    //进度条更新
+    self.bottomView.progressSlider.value = self.playManager.currentTime / self.playManager.allTime * 100;
+    //图片旋转
+    CGFloat angle = M_PI_4 * .01;
+    self.centerView.singerImageView.transform = CGAffineTransformRotate(self.centerView.singerImageView.transform, angle);
+    //时间显示更新
+    self.bottomView.beginTimeLabel.text = [MXTimeTool timeStringFromTimeInterval:self.playManager.currentTime];
 }
 
 #pragma <MXControlDelegate>
@@ -124,8 +147,20 @@
 
 - (void)nextMusic {
     self.currentMusic++;
+    [self changeMusic];
+}
+
+- (void)lastMusic {
+    self.currentMusic--;
+    [self changeMusic];
+}
+
+- (void)changeMusic {
+    [self stopTimer];
     if (self.currentMusic >= self.dataArray.count) {
         self.currentMusic = 0;
+    } else if (self.currentMusic < 0) {
+        self.currentMusic = self.dataArray.count - 1;
     }
     [self upLoadData];
     if (self.isPlaying) {
@@ -133,15 +168,18 @@
     }
 }
 
-- (void)lastMusic {
-    self.currentMusic--;
-    if (self.currentMusic < 0) {
-        self.currentMusic = self.dataArray.count - 1;
-    }
-    [self upLoadData];
-    if (self.isPlaying) {
-        [self playCurrentMusic];
-    }
+- (void)changeProgress:(CGFloat)progress {
+    self.playManager.player.currentTime = progress * self.playManager.allTime;
+}
+
+#pragma timer
+- (void)startTimer {
+    _timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(playProgressChange) userInfo:nil repeats:YES];
+}
+
+- (void)stopTimer {
+    [self.timer invalidate];
+    _timer = nil;
 }
 
 #pragma getter and setter

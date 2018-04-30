@@ -7,7 +7,7 @@
 //
 
 #import "MXPlayManager.h"
-@interface MXPlayManager()
+@interface MXPlayManager() <AVAudioPlayerDelegate>
 
 @property (nonatomic, strong) NSString *fileName;
 
@@ -23,6 +23,7 @@
     if (![_fileName isEqualToString:fileName]) {
         NSURL *url = [[NSBundle mainBundle] URLForResource:fileName withExtension:nil];
         _player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+        _player.delegate = self;
         [_player prepareToPlay];
         _fileName = fileName;
         _complete = completion;
@@ -40,6 +41,25 @@
         }
     }
     return _manager;
+}
+
+- (void)setCurrentTime:(NSTimeInterval)currentTime {
+    self.player.currentTime = currentTime;
+}
+
+- (NSTimeInterval)currentTime {
+    return self.player.currentTime;
+}
+
+- (NSTimeInterval)allTime {
+    return self.player.duration;
+}
+
+#pragma <AVAudioPlayerDelegate>
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+    if (flag) {
+        _complete();
+    }
 }
 
 @end

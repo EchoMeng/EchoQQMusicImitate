@@ -17,6 +17,8 @@
 
 - (void)lastMusic;
 
+- (void)changeProgress:(CGFloat)progress;
+
 @end
 
 @interface MXBottomView : UIView

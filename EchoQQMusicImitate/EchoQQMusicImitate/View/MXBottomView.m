@@ -15,6 +15,7 @@
 #define ProgressMargin (20)
 #define TimeLabelWidth (40)
 #define ProgressHeight (30)
+#define TimeLabelFontSize (10)
 
 @implementation MXBottomView
 
@@ -90,6 +91,12 @@
     }
 }
 
+- (void)progressChange:(UISlider *)slider {
+    if ([self.delegate respondsToSelector:@selector(changeProgress:)]) {
+        [self.delegate changeProgress:slider.value / (slider.maximumValue - slider.minimumValue)];
+    }
+}
+
 #pragma getter and setter
 - (UIButton *)playButton {
     if (!_playButton) {
@@ -132,6 +139,7 @@
         [_progressSlider setMaximumValue:100];
         [_progressSlider setMinimumValue:0];
         _progressSlider.tintColor = [UIColor colorWithRed:58/255.0 green:193/255.0 blue:126/255.0 alpha:1];
+        [_progressSlider addTarget:self action:@selector(progressChange:) forControlEvents:UIControlEventValueChanged];
         [self addSubview:_progressSlider];
     }
     return _progressSlider;
@@ -140,6 +148,9 @@
 - (UILabel *)beginTimeLabel {
     if (!_beginTimeLabel) {
         _beginTimeLabel = [[UILabel alloc] init];
+        _beginTimeLabel.textColor = [UIColor whiteColor];
+        _beginTimeLabel.font = [UIFont systemFontOfSize:TimeLabelFontSize];
+        _beginTimeLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:_beginTimeLabel];
     }
     return _beginTimeLabel;
@@ -148,6 +159,9 @@
 - (UILabel *)allTimeLabel {
     if (!_allTimeLabel) {
         _allTimeLabel = [[UILabel alloc] init];
+        _allTimeLabel.textColor = [UIColor whiteColor];
+        _allTimeLabel.font = [UIFont systemFontOfSize:TimeLabelFontSize];
+        _allTimeLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:_allTimeLabel];
     }
     return  _allTimeLabel;
