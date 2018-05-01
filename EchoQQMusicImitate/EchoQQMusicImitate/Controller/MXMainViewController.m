@@ -14,6 +14,7 @@
 #import <MJExtension.h>
 #import "MXPlayManager.h"
 #import "MXTimeTool.h"
+#import "MXLyricsPhaser.h"
 
 #define TopHeight (124)
 #define BottomHeight (140)
@@ -41,6 +42,8 @@
 
 @property (nonatomic, strong) NSTimer *timer;
 
+@property (nonatomic, strong) NSArray *lyrics;
+
 @end
 
 @implementation MXMainViewController
@@ -59,6 +62,7 @@
     }
     _currentMusicModel = self.dataArray[self.currentMusic];
     self.singerBackgrundView.image = [UIImage imageNamed:_currentMusicModel.image];
+    _lyrics = [MXLyricsPhaser lyricsWithFileName:_currentMusicModel.lrc];
     self.title = _currentMusicModel.name;
     self.topView.music = _currentMusicModel;
     self.centerView.music = _currentMusicModel;
