@@ -15,6 +15,7 @@
 #import "MXPlayManager.h"
 #import "MXTimeTool.h"
 #import "MXLyricsPhaser.h"
+#import "MXLyrics.h"
 
 #define TopHeight (124)
 #define BottomHeight (140)
@@ -44,6 +45,8 @@
 
 @property (nonatomic, strong) NSArray *lyrics;
 
+@property (nonatomic, assign) NSInteger currentLyricsIndex;
+
 @end
 
 @implementation MXMainViewController
@@ -63,6 +66,7 @@
     _currentMusicModel = self.dataArray[self.currentMusic];
     self.singerBackgrundView.image = [UIImage imageNamed:_currentMusicModel.image];
     _lyrics = [MXLyricsPhaser lyricsWithFileName:_currentMusicModel.lrc];
+    self.currentLyricsIndex = 0;
     self.title = _currentMusicModel.name;
     self.topView.music = _currentMusicModel;
     self.centerView.music = _currentMusicModel;
@@ -73,6 +77,25 @@
         self.bottomView.allTimeLabel.text = [MXTimeTool timeStringFromTimeInterval:self.playManager.allTime];
     }
     self.bottomView.beginTimeLabel.text = [MXTimeTool timeStringFromTimeInterval:self.playManager.currentTime];
+}
+
+- (void)updateLyrics {
+    MXLyrics *currentLyric = self.lyrics[self.currentLyricsIndex];
+    MXLyrics *nextLyrics = nil;
+    if (self.currentLyricsIndex == self.lyrics.count - 1) {
+        nextLyrics = currentLyric;
+    } else {
+        nextLyrics = self.lyrics[self.currentLyricsIndex + 1];
+    }
+    //播放时间大于等于下一句歌词对应时间，显示歌词应该更新到下一句
+    if (self.playManager.currentTime >= nextLyrics.initTime && self.currentLyricsIndex < self.lyrics.count - 1) {
+        self.currentLyricsIndex++;
+    }
+    if (self.playManager.currentTime < currentLyric.initTime && self.currentLyricsIndex != 0) {
+        self.currentLyricsIndex--;
+    }
+    currentLyric = self.lyrics[self.currentLyricsIndex];
+    self.centerView.lyricLabel.text = currentLyric.content;
 }
 
 - (void)makeUpMarsonry {
@@ -136,6 +159,8 @@
     self.centerView.singerImageView.transform = CGAffineTransformRotate(self.centerView.singerImageView.transform, angle);
     //时间显示更新
     self.bottomView.beginTimeLabel.text = [MXTimeTool timeStringFromTimeInterval:self.playManager.currentTime];
+    //歌词更新
+    [self updateLyrics];
 }
 
 #pragma <MXControlDelegate>

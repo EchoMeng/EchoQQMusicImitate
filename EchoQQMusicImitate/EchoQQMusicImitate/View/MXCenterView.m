@@ -52,7 +52,6 @@
 - (void)setMusic:(MXMusic *)music {
     if (music) {
         self.singerImageView.image = [UIImage imageNamed:music.image];
-        self.lyricLabel.text = music.lrc;
         _music = music;
     }
 }

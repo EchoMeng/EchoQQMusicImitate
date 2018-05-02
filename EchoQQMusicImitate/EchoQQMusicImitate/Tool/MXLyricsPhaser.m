@@ -17,7 +17,7 @@
     //用\n换行符将歌词文本区分为每句歌词，放入数组中
     NSArray *lyricsArray = [lyricsStr componentsSeparatedByString:@"\n"];
     //正则表达式
-    NSString *pattern = @"[\\[0-9]{2}:[0-9]{2}.[0-9]{2}\\]";
+    NSString *pattern = @"\\[[0-9]{2}:[0-9]{2}.[0-9]{2}\\]";
     NSRegularExpression *regular = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:nil];
     //这个数组用来装结果，数组中是歌词模型，包括每一行歌词文本和对应的时间
     NSMutableArray *array = [NSMutableArray array];
@@ -45,6 +45,10 @@
         }
         
     }
+    //这里不可以直接返回数据，要对数据进行排序，部分重复的歌词的格式需要做调整，因此一定要排序
+    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"initTime" ascending:YES];
+    [array sortUsingDescriptors:@[descriptor]];
+    
     return array;
 }
 
