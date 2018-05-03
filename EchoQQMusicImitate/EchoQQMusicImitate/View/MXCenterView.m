@@ -8,6 +8,7 @@
 
 #import "MXCenterView.h"
 
+
 #define SingerImageLeftRightMargin (30)
 #define SingerImageTopMargin (30)
 #define LyricsLabelBottomMargin (50)
@@ -17,7 +18,6 @@
 - (instancetype)init {
     if (self = [super init]) {
         [self makeUpMarsonry];
-
     }
     return self;
 }
@@ -35,17 +35,10 @@
         make.top.mas_equalTo(self.mas_top).offset(SingerImageTopMargin);
         make.height.mas_equalTo(self.singerImageView.mas_width);
     }];
-    
     [self.lyricLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self.mas_centerX);
         make.left.mas_equalTo(self.mas_left);
-        make.right.mas_equalTo(self.mas_right);
-        make.bottom.mas_equalTo(self.mas_bottom).offset(-LyricsLabelBottomMargin);
-    }];
-    
-    [self.pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(self.mas_bottom);
-        make.centerX.mas_equalTo(self.mas_centerX);
+        make.top.mas_equalTo(self.singerImageView.mas_bottom).offset(20);
     }];
 }
 
@@ -67,21 +60,12 @@
 
 - (UILabel *)lyricLabel {
     if (!_lyricLabel) {
-        _lyricLabel = [[UILabel alloc] init];
+        _lyricLabel = [[MXColorLabel alloc] init];
         _lyricLabel.textAlignment = NSTextAlignmentCenter;
         _lyricLabel.textColor = [UIColor whiteColor];
         [self addSubview:_lyricLabel];
     }
     return _lyricLabel;
-}
-
-- (UIPageControl *)pageControl {
-    if (!_pageControl) {
-        _pageControl = [[UIPageControl alloc] init];
-        _pageControl.numberOfPages = 3;
-        [self addSubview:_pageControl];
-    }
-    return _pageControl;
 }
 
 @end

@@ -8,7 +8,7 @@
 
 #import "MXMainViewController.h"
 #import "MXTopView.h"
-#import "MXCenterView.h"
+#import "MXCenterScrollView.h"
 #import "MXBottomView.h"
 #import "MXMusic.h"
 #import <MJExtension.h>
@@ -17,17 +17,13 @@
 #import "MXLyricsPhaser.h"
 #import "MXLyrics.h"
 
-#define TopHeight (124)
-#define BottomHeight (140)
-
-
-@interface MXMainViewController () <MXControlDelegate>
+@interface MXMainViewController () <MXControlDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UIImageView *singerBackgrundView;
 
 @property (nonatomic, strong) MXTopView *topView;
 
-@property (nonatomic, strong) MXCenterView *centerView;
+@property (nonatomic, strong) MXCenterScrollView *centerScrollView;
 
 @property (nonatomic, strong) MXBottomView *bottomView;
 
@@ -47,6 +43,8 @@
 
 @property (nonatomic, assign) NSInteger currentLyricsIndex;
 
+@property (nonatomic, strong) UIPageControl *pageControl;
+
 @end
 
 @implementation MXMainViewController
@@ -55,6 +53,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self configBackgroundView];
+    [self.view addSubview:self.topView];
+    [self.view addSubview:self.centerScrollView];
+    [self.view addSubview:self.bottomView];
+    [self.view addSubview:self.pageControl];
     [self makeUpMarsonry];
     [self upLoadData];
 }
@@ -69,7 +71,7 @@
     self.currentLyricsIndex = 0;
     self.title = _currentMusicModel.name;
     self.topView.music = _currentMusicModel;
-    self.centerView.music = _currentMusicModel;
+    self.centerScrollView.centerContentView.centerHomeView.music = _currentMusicModel;
     self.bottomView.music = _currentMusicModel;
     if (self.playManager.allTime == 0) {
         self.bottomView.allTimeLabel.text = [MXTimeTool timeStringFromMusicFile:_currentMusicModel.mp3];
@@ -81,21 +83,33 @@
 
 - (void)updateLyrics {
     MXLyrics *currentLyric = self.lyrics[self.currentLyricsIndex];
+    MXLyrics *nextLyrics = [self nextLyrics];
+    //播放时间大于等于下一句歌词对应时间，显示歌词应该更新到下一句
+    if (self.playManager.currentTime >= nextLyrics.initTime && self.currentLyricsIndex < self.lyrics.count - 1) {
+        self.currentLyricsIndex++;
+        currentLyric = self.lyrics[self.currentLyricsIndex];
+        self.centerScrollView.centerContentView.centerHomeView.lyricLabel.text = currentLyric.content;
+    }
+    if (self.playManager.currentTime < currentLyric.initTime && self.currentLyricsIndex != 0) {
+        self.currentLyricsIndex--;
+        currentLyric = self.lyrics[self.currentLyricsIndex];
+        self.centerScrollView.centerContentView.centerHomeView.lyricLabel.text = currentLyric.content;
+    }
+    nextLyrics = [self nextLyrics];
+    //更新歌词的渲染颜色
+    CGFloat progress = (self.playManager.currentTime - currentLyric.initTime) / (nextLyrics.initTime - currentLyric.initTime);
+    self.centerScrollView.centerContentView.centerHomeView.lyricLabel.progress = progress;
+}
+
+- (MXLyrics *)nextLyrics {
+    MXLyrics *currentLyric = self.lyrics[self.currentLyricsIndex];
     MXLyrics *nextLyrics = nil;
     if (self.currentLyricsIndex == self.lyrics.count - 1) {
         nextLyrics = currentLyric;
     } else {
         nextLyrics = self.lyrics[self.currentLyricsIndex + 1];
     }
-    //播放时间大于等于下一句歌词对应时间，显示歌词应该更新到下一句
-    if (self.playManager.currentTime >= nextLyrics.initTime && self.currentLyricsIndex < self.lyrics.count - 1) {
-        self.currentLyricsIndex++;
-    }
-    if (self.playManager.currentTime < currentLyric.initTime && self.currentLyricsIndex != 0) {
-        self.currentLyricsIndex--;
-    }
-    currentLyric = self.lyrics[self.currentLyricsIndex];
-    self.centerView.lyricLabel.text = currentLyric.content;
+    return nextLyrics;
 }
 
 - (void)makeUpMarsonry {
@@ -113,11 +127,9 @@
         make.height.mas_equalTo(BottomHeight);
     }];
     
-    [self.centerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.view.mas_left);
-        make.right.mas_equalTo(self.view.mas_right);
-        make.top.mas_equalTo(self.topView.mas_bottom);
-        make.bottom.mas_equalTo(self.bottomView.mas_top);
+    [self.pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.view.mas_centerX);
+        make.bottom.mas_equalTo(self.view.mas_bottom).mas_offset(-BottomHeight);
     }];
 }
 
@@ -156,11 +168,16 @@
     self.bottomView.progressSlider.value = self.playManager.currentTime / self.playManager.allTime * 100;
     //图片旋转
     CGFloat angle = M_PI_4 * .01;
-    self.centerView.singerImageView.transform = CGAffineTransformRotate(self.centerView.singerImageView.transform, angle);
+    self.centerScrollView.centerContentView.centerHomeView.singerImageView.transform = CGAffineTransformRotate(self.centerScrollView.centerContentView.centerHomeView.singerImageView.transform, angle);
     //时间显示更新
     self.bottomView.beginTimeLabel.text = [MXTimeTool timeStringFromTimeInterval:self.playManager.currentTime];
     //歌词更新
     [self updateLyrics];
+}
+
+- (void)pageChange {
+    NSInteger page = self.pageControl.currentPage;
+    self.centerScrollView.contentOffset = CGPointMake(MXScreenWidth * page, 0);
 }
 
 #pragma <MXControlDelegate>
@@ -211,28 +228,59 @@
     _timer = nil;
 }
 
+#pragma tableview datasaurce
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    cell.textLabel.text = @"推荐一首";
+    return  cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100;
+}
+
+#pragma scrollviewDelegate
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    NSInteger page = scrollView.contentOffset.x / MXScreenWidth;
+    self.pageControl.currentPage = page;
+}
+
+
 #pragma getter and setter
 - (MXTopView *)topView {
     if (!_topView) {
         _topView = [[MXTopView alloc] init];
-        [self.view addSubview:_topView];
     }
     return _topView;
 }
 
-- (MXCenterView *)centerView {
-    if (!_centerView) {
-        _centerView = [[MXCenterView alloc] init];
-        [self.view addSubview:_centerView];
+- (MXCenterScrollView *)centerScrollView {
+    if (!_centerScrollView) {
+        _centerScrollView = [[MXCenterScrollView alloc] init];
+        _centerScrollView.contentSize = CGSizeMake(3 * MXScreenWidth, 0);
+        _centerScrollView.pagingEnabled = YES;
+        _centerScrollView.delegate = self;
+        _centerScrollView.centerContentView.lyricsView.delegate = self;
+        _centerScrollView.centerContentView.lyricsView.dataSource = self;
+        _centerScrollView.centerContentView.recommendView.delegate = self;
+        _centerScrollView.centerContentView.recommendView.dataSource = self;
+        _centerScrollView.frame = CGRectMake(0, TopHeight, MXScreenWidth, MXScreenHeight - TopHeight - BottomHeight);
     }
-    return _centerView;
+    return _centerScrollView;
 }
 
 - (MXBottomView *)bottomView {
     if (!_bottomView) {
         _bottomView = [[MXBottomView alloc] init];
         _bottomView.delegate = self;
-        [self.view addSubview:_bottomView];
     }
     return _bottomView;
 }
@@ -256,6 +304,15 @@
         _playManager = [MXPlayManager shareManager];
     }
     return _playManager;
+}
+
+- (UIPageControl *)pageControl {
+    if (!_pageControl) {
+        _pageControl = [[UIPageControl alloc] init];
+        _pageControl.numberOfPages = 3;
+        [_pageControl addTarget:self action:@selector(pageChange) forControlEvents:UIControlEventValueChanged];
+    }
+    return _pageControl;
 }
 
 @end

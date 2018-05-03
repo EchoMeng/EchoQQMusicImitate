@@ -8,14 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "MXMusic.h"
+#import "MXColorLabel.h"
 
 @interface MXCenterView : UIView
 
 @property (nonatomic, strong) UIImageView *singerImageView;
 
-@property (nonatomic, strong) UILabel *lyricLabel;
-
-@property (nonatomic, strong) UIPageControl *pageControl;
+@property (nonatomic, strong) MXColorLabel *lyricLabel;
 
 @property (nonatomic, strong) MXMusic *music;
 

@@ -9,10 +9,15 @@
 /* Begin PBXBuildFile section */
 		0494EB732098453400F8894C /* MXLyricsPhaser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0494EB722098453400F8894C /* MXLyricsPhaser.m */; };
 		0494EB762098532900F8894C /* MXLyrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 0494EB752098532900F8894C /* MXLyrics.m */; };
+		0494EB79209955C600F8894C /* MXColorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0494EB78209955C600F8894C /* MXColorLabel.m */; };
+		0494EB7C20995D9A00F8894C /* MXCenterScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0494EB7B20995D9A00F8894C /* MXCenterScrollView.m */; };
+		0494EB8220995F6D00F8894C /* MXCenterLyricsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0494EB8120995F6D00F8894C /* MXCenterLyricsView.m */; };
+		0494EB8520995FBC00F8894C /* MXCenterRecommendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0494EB8420995FBC00F8894C /* MXCenterRecommendView.m */; };
 		04C55DE22096BA9F00C9BE9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C55DDB2096BA9F00C9BE9A /* AppDelegate.m */; };
 		04C55DE32096BA9F00C9BE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C55DDD2096BA9F00C9BE9A /* Assets.xcassets */; };
 		04C55DE42096BA9F00C9BE9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C55DDE2096BA9F00C9BE9A /* main.m */; };
 		04C55DE52096BA9F00C9BE9A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04C55DDF2096BA9F00C9BE9A /* Info.plist */; };
+		04ECA1892099D7D700A74D44 /* MXCenterContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04ECA1882099D7D700A74D44 /* MXCenterContentView.m */; };
 		04FD5FF62096BD9E007DBAE5 /* MXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD5FF52096BD9E007DBAE5 /* MXMainViewController.m */; };
 		04FD5FF92096D93B007DBAE5 /* MXTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD5FF82096D93B007DBAE5 /* MXTopView.m */; };
 		04FD5FFC2096D94F007DBAE5 /* MXCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD5FFB2096D94F007DBAE5 /* MXCenterView.m */; };
@@ -41,12 +46,22 @@
 		0494EB722098453400F8894C /* MXLyricsPhaser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXLyricsPhaser.m; sourceTree = "<group>"; };
 		0494EB742098532900F8894C /* MXLyrics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXLyrics.h; sourceTree = "<group>"; };
 		0494EB752098532900F8894C /* MXLyrics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXLyrics.m; sourceTree = "<group>"; };
+		0494EB77209955C600F8894C /* MXColorLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXColorLabel.h; sourceTree = "<group>"; };
+		0494EB78209955C600F8894C /* MXColorLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXColorLabel.m; sourceTree = "<group>"; };
+		0494EB7A20995D9A00F8894C /* MXCenterScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXCenterScrollView.h; sourceTree = "<group>"; };
+		0494EB7B20995D9A00F8894C /* MXCenterScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXCenterScrollView.m; sourceTree = "<group>"; };
+		0494EB8020995F6D00F8894C /* MXCenterLyricsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXCenterLyricsView.h; sourceTree = "<group>"; };
+		0494EB8120995F6D00F8894C /* MXCenterLyricsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXCenterLyricsView.m; sourceTree = "<group>"; };
+		0494EB8320995FBC00F8894C /* MXCenterRecommendView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXCenterRecommendView.h; sourceTree = "<group>"; };
+		0494EB8420995FBC00F8894C /* MXCenterRecommendView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXCenterRecommendView.m; sourceTree = "<group>"; };
 		04C55DBA2096B60300C9BE9A /* EchoQQMusicImitate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EchoQQMusicImitate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C55DDA2096BA9F00C9BE9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04C55DDB2096BA9F00C9BE9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		04C55DDD2096BA9F00C9BE9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04C55DDE2096BA9F00C9BE9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04C55DDF2096BA9F00C9BE9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04ECA1872099D7D700A74D44 /* MXCenterContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXCenterContentView.h; sourceTree = "<group>"; };
+		04ECA1882099D7D700A74D44 /* MXCenterContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXCenterContentView.m; sourceTree = "<group>"; };
 		04FD5FF42096BD9E007DBAE5 /* MXMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXMainViewController.h; sourceTree = "<group>"; };
 		04FD5FF52096BD9E007DBAE5 /* MXMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXMainViewController.m; sourceTree = "<group>"; };
 		04FD5FF72096D93B007DBAE5 /* MXTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXTopView.h; sourceTree = "<group>"; };
@@ -159,6 +174,16 @@
 				04FD5FFB2096D94F007DBAE5 /* MXCenterView.m */,
 				04FD5FFE2096D97E007DBAE5 /* MXBottomView.h */,
 				04FD5FFF2096D97E007DBAE5 /* MXBottomView.m */,
+				0494EB77209955C600F8894C /* MXColorLabel.h */,
+				0494EB78209955C600F8894C /* MXColorLabel.m */,
+				0494EB7A20995D9A00F8894C /* MXCenterScrollView.h */,
+				0494EB7B20995D9A00F8894C /* MXCenterScrollView.m */,
+				04ECA1872099D7D700A74D44 /* MXCenterContentView.h */,
+				04ECA1882099D7D700A74D44 /* MXCenterContentView.m */,
+				0494EB8020995F6D00F8894C /* MXCenterLyricsView.h */,
+				0494EB8120995F6D00F8894C /* MXCenterLyricsView.m */,
+				0494EB8320995FBC00F8894C /* MXCenterRecommendView.h */,
+				0494EB8420995FBC00F8894C /* MXCenterRecommendView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -343,15 +368,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				04FD602620971301007DBAE5 /* MXPlayManager.m in Sources */,
+				0494EB8220995F6D00F8894C /* MXCenterLyricsView.m in Sources */,
 				0494EB732098453400F8894C /* MXLyricsPhaser.m in Sources */,
 				04FD60002096D97E007DBAE5 /* MXBottomView.m in Sources */,
 				04FD6029209735DA007DBAE5 /* MXTimeTool.m in Sources */,
 				04FD5FFC2096D94F007DBAE5 /* MXCenterView.m in Sources */,
+				0494EB79209955C600F8894C /* MXColorLabel.m in Sources */,
 				04C55DE42096BA9F00C9BE9A /* main.m in Sources */,
 				0494EB762098532900F8894C /* MXLyrics.m in Sources */,
 				04FD5FF92096D93B007DBAE5 /* MXTopView.m in Sources */,
+				0494EB7C20995D9A00F8894C /* MXCenterScrollView.m in Sources */,
 				04FD60232097018A007DBAE5 /* MXMusic.m in Sources */,
+				04ECA1892099D7D700A74D44 /* MXCenterContentView.m in Sources */,
 				04FD5FF62096BD9E007DBAE5 /* MXMainViewController.m in Sources */,
+				0494EB8520995FBC00F8894C /* MXCenterRecommendView.m in Sources */,
 				04C55DE22096BA9F00C9BE9A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
