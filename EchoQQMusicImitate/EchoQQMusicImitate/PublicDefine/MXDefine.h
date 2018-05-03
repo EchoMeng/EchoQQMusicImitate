@@ -12,5 +12,4 @@
 #define MXScreenWidth [UIScreen mainScreen].bounds.size.width
 #define MXScreenHeight [UIScreen mainScreen].bounds.size.height
 #define MXScreenBounds [UIScreen mainScreen].bounds
-#define TopHeight (124)
 #define BottomHeight (140)

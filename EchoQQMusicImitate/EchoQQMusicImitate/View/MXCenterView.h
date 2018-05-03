@@ -18,4 +18,6 @@
 
 @property (nonatomic, strong) MXMusic *music;
 
+@property (nonatomic, strong) UILabel *singerLabel;
+
 @end

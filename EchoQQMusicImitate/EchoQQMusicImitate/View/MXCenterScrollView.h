@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MXCenterContentView.h"
+#import "MXCenterView.h"
+#import "MXCenterLyricsView.h"
+#import "MXCenterRecommendView.h"
 
 @interface MXCenterScrollView : UIScrollView
 
-@property (nonatomic, strong) MXCenterContentView *centerContentView;
+@property (nonatomic, strong) MXCenterView *centerHomeView;
+
+@property (nonatomic, strong) MXCenterRecommendView *recommendView;
+
+@property (nonatomic, strong) MXCenterLyricsView *lyricsView;
 
 @end

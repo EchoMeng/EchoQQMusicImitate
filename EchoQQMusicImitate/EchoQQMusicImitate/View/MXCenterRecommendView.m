@@ -10,9 +10,11 @@
 
 @implementation MXCenterRecommendView
 
-- (instancetype)init {
-    if (self = [super init]) {
-        
+- (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
+    if (self = [super initWithFrame:frame style:style]) {
+        self.backgroundColor = [UIColor clearColor];
+        self.showsHorizontalScrollIndicator = NO;
+        self.showsVerticalScrollIndicator = NO;
     }
     return self;
 }

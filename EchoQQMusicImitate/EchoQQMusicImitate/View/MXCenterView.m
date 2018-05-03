@@ -29,10 +29,15 @@
 }
 
 - (void)makeUpMarsonry {
+    [self.singerLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.mas_centerX);
+        make.top.mas_equalTo(self.mas_top).offset(SingerImageTopMargin);
+    }];
+    
     [self.singerImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.mas_left).offset(SingerImageLeftRightMargin);
         make.right.mas_equalTo(self.mas_right).offset(-SingerImageLeftRightMargin);
-        make.top.mas_equalTo(self.mas_top).offset(SingerImageTopMargin);
+        make.top.mas_equalTo(self.singerLabel.mas_bottom).offset(SingerImageTopMargin);
         make.height.mas_equalTo(self.singerImageView.mas_width);
     }];
     [self.lyricLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -45,6 +50,7 @@
 - (void)setMusic:(MXMusic *)music {
     if (music) {
         self.singerImageView.image = [UIImage imageNamed:music.image];
+        self.singerLabel.text = music.singer;
         _music = music;
     }
 }
@@ -66,6 +72,15 @@
         [self addSubview:_lyricLabel];
     }
     return _lyricLabel;
+}
+
+- (UILabel *)singerLabel {
+    if (!_singerLabel) {
+        _singerLabel = [[UILabel alloc] init];
+        _singerLabel.textColor = [UIColor whiteColor];
+        [self addSubview:_singerLabel];
+    }
+    return _singerLabel;
 }
 
 @end
