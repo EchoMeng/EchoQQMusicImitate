@@ -22,7 +22,7 @@
         self.colorLabel.textAlignment = NSTextAlignmentCenter;
         self.colorLabel.textColor = [UIColor whiteColor];
         self.colorLabel.font = [UIFont systemFontOfSize:LyricsFontSize];
-        self.selected = NO;
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return self;
 }

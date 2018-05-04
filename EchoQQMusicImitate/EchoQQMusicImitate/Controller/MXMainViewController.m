@@ -269,7 +269,7 @@
 
 #pragma tableviewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ((tableView = self.centerScrollView.recommendView)) {
+    if (tableView == self.centerScrollView.recommendView) {
         self.currentMusic = indexPath.row;
         [self changeMusic];
         [self.centerScrollView.lyricsView reloadData];
