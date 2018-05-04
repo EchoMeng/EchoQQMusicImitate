@@ -267,6 +267,17 @@
     }
 }
 
+#pragma tableviewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ((tableView = self.centerScrollView.recommendView)) {
+        self.currentMusic = indexPath.row;
+        [self changeMusic];
+        [self.centerScrollView.lyricsView reloadData];
+        self.centerScrollView.contentOffset = CGPointMake(MXScreenWidth, 0);
+        [self.centerScrollView.recommendView deselectRowAtIndexPath:indexPath animated:YES];
+    }
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([tableView isMemberOfClass:[MXCenterLyricsView class]]) {
         return LyricsCellHeight;
