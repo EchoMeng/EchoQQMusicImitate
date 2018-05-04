@@ -62,6 +62,10 @@
     [self.view addSubview:self.pageControl];
     [self makeUpMarsonry];
     [self upLoadData];
+    self.pageControl.currentPage = 1;
+    self.centerScrollView.contentOffset = CGPointMake(MXScreenWidth, 0);
+    self.centerScrollView.lyricsView.contentInset = UIEdgeInsetsMake(LyricsCellHeight * 5, 0, 0, 0);
+    self.centerScrollView.lyricsView.contentOffset = CGPointMake(0, - LyricsCellHeight * 5);
 }
 
 - (void)upLoadData {
@@ -102,6 +106,16 @@
     //更新歌词的渲染颜色
     CGFloat progress = (self.playManager.currentTime - currentLyric.initTime) / (nextLyrics.initTime - currentLyric.initTime);
     self.centerScrollView.centerHomeView.lyricLabel.progress = progress;
+    
+    //更新歌词页的显示，歌词滚动以及颜色渲染
+    NSIndexPath *currentIndexPath = [NSIndexPath indexPathForRow:self.currentLyricsIndex inSection:0];
+    MXLyricsTableViewCell *cell = [self.centerScrollView.lyricsView cellForRowAtIndexPath:currentIndexPath];
+    cell.colorLabel.progress = progress;
+    self.centerScrollView.lyricsView.contentOffset = CGPointMake(0, LyricsCellHeight * (self.currentLyricsIndex - 5));
+    //在跳到本行歌词的时候，要确保上一行歌词的显示颜色
+    NSIndexPath *lastIndexPath = [NSIndexPath indexPathForRow:self.currentLyricsIndex - 1 inSection:0];
+    MXLyricsTableViewCell *lastCell = [self.centerScrollView.lyricsView cellForRowAtIndexPath:lastIndexPath];
+    lastCell.colorLabel.progress = 0;
 }
 
 - (MXLyrics *)nextLyrics {
@@ -238,7 +252,8 @@
         MXLyricsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:LyricsCellReuseID];
         cell.backgroundColor = [UIColor clearColor];
         MXLyrics *ly = _lyrics[indexPath.row];
-        cell.textLabel.text = ly.content;
+        cell.colorLabel.text = ly.content;
+        cell.colorLabel.progress = 0;
         return cell;
     } else {
         MXRecommendTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:RecommendCellReuseID];
@@ -262,8 +277,10 @@
 
 #pragma scrollviewDelegate
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    NSInteger page = scrollView.contentOffset.x / MXScreenWidth;
-    self.pageControl.currentPage = page;
+    if (scrollView == self.centerScrollView) {
+        NSInteger page = scrollView.contentOffset.x / MXScreenWidth;
+        self.pageControl.currentPage = page;
+    }
 }
 
 #pragma getter and setter

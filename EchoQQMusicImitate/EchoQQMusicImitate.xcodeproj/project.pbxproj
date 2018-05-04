@@ -504,7 +504,7 @@
 			baseConfigurationReference = 47215FEA1954C79CAF6156A8 /* Pods-EchoQQMusicImitate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R94472JZM4;
 				GCC_PREFIX_HEADER = "/Users/mac/Documents/programming/Objective-CProgramme/EchoQQMusicImitate/EchoQQMusicImitate/EchoQQMusicImitate/PublicDefine/PrefixHeader.pch";
@@ -524,7 +524,7 @@
 			baseConfigurationReference = 8FC7C8B7E29A53C99B8162A3 /* Pods-EchoQQMusicImitate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R94472JZM4;
 				GCC_PREFIX_HEADER = "/Users/mac/Documents/programming/Objective-CProgramme/EchoQQMusicImitate/EchoQQMusicImitate/EchoQQMusicImitate/PublicDefine/PrefixHeader.pch";

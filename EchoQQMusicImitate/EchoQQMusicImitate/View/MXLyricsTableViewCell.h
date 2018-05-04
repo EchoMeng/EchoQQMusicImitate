@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MXColorLabel.h"
 
 @interface MXLyricsTableViewCell : UITableViewCell
+
+@property (nonatomic, strong) MXColorLabel *colorLabel;
 
 @end

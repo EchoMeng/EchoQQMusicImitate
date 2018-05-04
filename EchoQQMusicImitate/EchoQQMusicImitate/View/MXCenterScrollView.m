@@ -24,7 +24,7 @@
 - (MXCenterView *)centerHomeView {
     if (!_centerHomeView) {
         _centerHomeView = [[MXCenterView alloc] init];
-        _centerHomeView.frame = CGRectMake(MXScreenWidth, 0, MXScreenWidth, MXScreenHeight - BottomHeight);
+        _centerHomeView.frame = CGRectMake(MXScreenWidth, 0, MXScreenWidth, MXScreenHeight - BottomHeight - 64 - 44);
         [self addSubview:_centerHomeView];
     }
     return _centerHomeView;
@@ -32,7 +32,7 @@
 
 - (MXCenterRecommendView *)recommendView {
     if (!_recommendView) {
-        _recommendView = [[MXCenterRecommendView alloc] initWithFrame:CGRectMake(0, 0, MXScreenWidth, MXScreenHeight - BottomHeight) style:UITableViewStylePlain];
+        _recommendView = [[MXCenterRecommendView alloc] initWithFrame:CGRectMake(0, 0, MXScreenWidth, MXScreenHeight - BottomHeight - 64 - 44) style:UITableViewStylePlain];
         _recommendView.separatorInset = UIEdgeInsetsMake(0, 10, 0, 10);
         [self addSubview:_recommendView];
     }
@@ -41,7 +41,7 @@
 
 - (MXCenterLyricsView *)lyricsView {
     if (!_lyricsView) {
-        _lyricsView = [[MXCenterLyricsView alloc] initWithFrame:CGRectMake(2*MXScreenWidth, 0, MXScreenWidth, MXScreenHeight - BottomHeight) style:UITableViewStylePlain];
+        _lyricsView = [[MXCenterLyricsView alloc] initWithFrame:CGRectMake(2*MXScreenWidth, 0, MXScreenWidth, MXScreenHeight - BottomHeight - 64 - 44) style:UITableViewStylePlain];
         _lyricsView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self addSubview:_lyricsView];
     }
