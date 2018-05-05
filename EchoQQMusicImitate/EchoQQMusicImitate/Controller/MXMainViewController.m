@@ -17,6 +17,8 @@
 #import "MXLyrics.h"
 #import "MXLyricsTableViewCell.h"
 #import "MXRecommendTableViewCell.h"
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
 
 #define LyricsCellHeight (50)
 #define RecommondCellHeight (80)
@@ -183,6 +185,22 @@
     self.bottomView.beginTimeLabel.text = [MXTimeTool timeStringFromTimeInterval:self.playManager.currentTime];
     //歌词更新
     [self updateLyrics];
+    //锁屏界面更新
+    [self updateLockPage];
+}
+
+- (void)updateLockPage {
+    MXMusic *music = self.dataArray[self.currentMusic];
+    //信息字典，用来装所有锁屏界面需要的元素
+    MPMediaItemArtwork *artWork = [[MPMediaItemArtwork alloc] initWithBoundsSize:CGSizeMake(50, 50) requestHandler:^UIImage * _Nonnull(CGSize size) {
+        //在这里绘制歌词图片
+        return [UIImage imageNamed:music.image];
+    }];
+    NSMutableDictionary *infoDic = [NSMutableDictionary dictionary];
+    infoDic[MPMediaItemPropertyTitle] = music.name;
+    infoDic[MPMediaItemPropertyAlbumTitle] = music.album;
+    infoDic[MPMediaItemPropertyArtwork] = artWork;
+    [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:infoDic];
 }
 
 - (void)pageChange {
@@ -190,9 +208,56 @@
     self.centerScrollView.contentOffset = CGPointMake(MXScreenWidth * page, 0);
 }
 
+#pragma remoteControl
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
+    if (event.type == UIEventTypeRemoteControl) {
+//        UIEventSubtypeNone                              = 0,
+//        UIEventSubtypeMotionShake                       = 1,
+//        UIEventSubtypeRemoteControlPlay                 = 100,
+//        UIEventSubtypeRemoteControlPause                = 101,
+//        UIEventSubtypeRemoteControlStop                 = 102,
+//        UIEventSubtypeRemoteControlTogglePlayPause      = 103,
+//        UIEventSubtypeRemoteControlNextTrack            = 104,
+//        UIEventSubtypeRemoteControlPreviousTrack        = 105,
+//        UIEventSubtypeRemoteControlBeginSeekingBackward = 106,
+//        UIEventSubtypeRemoteControlEndSeekingBackward   = 107,
+//        UIEventSubtypeRemoteControlBeginSeekingForward  = 108,
+//        UIEventSubtypeRemoteControlEndSeekingForward    = 109,
+        
+        switch (event.subtype) {
+            case UIEventSubtypeRemoteControlPlay: {
+                self.bottomView.playButton.selected = !self.bottomView.playButton.selected;
+                [self playOrPauseMusic];
+                [self updateLockPage];
+            }
+                break;
+            case UIEventSubtypeRemoteControlPause: {
+                self.bottomView.playButton.selected = !self.bottomView.playButton.selected;
+                [self playOrPauseMusic];
+                [self updateLockPage];
+            }
+                break;
+            case UIEventSubtypeRemoteControlNextTrack: {
+                [self nextMusic];
+                [self updateLockPage];
+            }
+                
+                break;
+            case UIEventSubtypeRemoteControlPreviousTrack: {
+                [self lastMusic];
+                [self updateLockPage];
+            }
+                
+                break;
+            default:
+                break;
+        }
+    }
+}
+
 #pragma <MXControlDelegate>
-- (void)playOrPauseMusic:(UIButton *)btn {
-    if (btn.selected) {
+- (void)playOrPauseMusic {
+    if (!self.isPlaying) {
         [self playCurrentMusic];
         self.isPlaying = YES;
     } else {

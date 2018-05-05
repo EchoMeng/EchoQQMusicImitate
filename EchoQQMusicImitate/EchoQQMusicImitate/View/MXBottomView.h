@@ -11,7 +11,7 @@
 
 @protocol MXControlDelegate<NSObject>
 
-- (void)playOrPauseMusic:(UIButton *)btn;
+- (void)playOrPauseMusic;
 
 - (void)nextMusic;
 

@@ -74,8 +74,8 @@
 #pragma control
 - (void)playOrPauseClick:(UIButton *)btn {
     btn.selected  = !btn.selected;
-    if ([self.delegate respondsToSelector:@selector(playOrPauseMusic:)]) {
-        [self.delegate playOrPauseMusic:btn];
+    if ([self.delegate respondsToSelector:@selector(playOrPauseMusic)]) {
+        [self.delegate playOrPauseMusic];
     }
 }
 

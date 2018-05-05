@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MXMainViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface AppDelegate ()
 
@@ -24,6 +25,13 @@
     window.rootViewController = nav;
     self.window = window;
     [self.window makeKeyAndVisible];
+    
+    //设置后台播放
+    AVAudioSession *section = [AVAudioSession sharedInstance];
+    [section setCategory:AVAudioSessionCategoryPlayback error:nil];
+    [section setActive:YES error:nil];
+    //接受远程线控
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     return YES;
 }
 
