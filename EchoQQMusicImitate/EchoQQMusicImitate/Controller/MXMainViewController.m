@@ -194,6 +194,7 @@
     //信息字典，用来装所有锁屏界面需要的元素
     MPMediaItemArtwork *artWork = [[MPMediaItemArtwork alloc] initWithBoundsSize:CGSizeMake(50, 50) requestHandler:^UIImage * _Nonnull(CGSize size) {
         //在这里绘制歌词图片
+        //现在的版本没有锁屏歌词显示了
         return [UIImage imageNamed:music.image];
     }];
     NSMutableDictionary *infoDic = [NSMutableDictionary dictionary];
@@ -206,6 +207,11 @@
 - (void)pageChange {
     NSInteger page = self.pageControl.currentPage;
     self.centerScrollView.contentOffset = CGPointMake(MXScreenWidth * page, 0);
+}
+
+#pragma lyrics interrupt notifacation
+- (void)audioSessionInterruptionNotification:(NSNotification *)noti {
+    
 }
 
 #pragma remoteControl
@@ -241,13 +247,11 @@
                 [self nextMusic];
                 [self updateLockPage];
             }
-                
                 break;
             case UIEventSubtypeRemoteControlPreviousTrack: {
                 [self lastMusic];
                 [self updateLockPage];
             }
-                
                 break;
             default:
                 break;
